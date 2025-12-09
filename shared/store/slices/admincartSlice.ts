@@ -1,6 +1,6 @@
-import { Product } from "@shared/dataFile/dataFileTypes/productTypes";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CartState } from "./sliceTypes/adminCartTypes";
+import { Product } from "../../dataFile/dataFileTypes/productTypes";
 
 const initialState: CartState = {
   items: [],

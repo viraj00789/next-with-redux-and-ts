@@ -1,4 +1,4 @@
-import { Product } from "@shared/dataFile/dataFileTypes/productTypes";
+import { Product } from "../../../dataFile/dataFileTypes/productTypes";
 
 export interface CartItem extends Product {
   qty: number;

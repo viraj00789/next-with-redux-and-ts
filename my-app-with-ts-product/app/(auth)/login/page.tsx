@@ -13,7 +13,6 @@ export default function LoginPage() {
     const user = useSelector((state: RootState) => {
         return state.auth.user;
     });
-    console.log("🚀 ~ LoginPage ~ user:", user);
 
     const [form, setForm] = useState({
         email: "",

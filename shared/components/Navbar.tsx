@@ -13,7 +13,6 @@ export default function Navbar({
     const cart = useSelector((state: RootState) => state.admincart.items);
     const user = useSelector((state: RootState) => state.auth.user);
     const dispatch = useAppDispatch();
-    console.log("🚀 ~ Navbar ~ user:", user);
 
     return (
         <>

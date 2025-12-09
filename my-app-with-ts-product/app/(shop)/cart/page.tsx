@@ -12,7 +12,6 @@ export default function CartPage() {
         return state.admincart.items;
     });
 
-    console.log("🚀 ~ CartPage ~ cart:", cart);
     const user = useSelector((state: RootState) => state.auth.user);
     const dispatch = useAppDispatch();
 
