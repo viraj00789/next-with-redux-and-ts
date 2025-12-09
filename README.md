@@ -3,7 +3,6 @@
 This repository contains a scalable **Next.js monorepo** built using:
 
 - **Next.js 16**
-- **React 19**
 - **TypeScript 5**
 - **Redux Toolkit**
 - **pnpm workspaces**
@@ -98,7 +97,7 @@ my-workspace
 Import anything from the shared workspace:
 
 ```ts
-import { someUtil } from "shared";
+import { someUtil } from "@shared";
 ```
 
 pnpm symlinks the workspace — no publishing needed.
