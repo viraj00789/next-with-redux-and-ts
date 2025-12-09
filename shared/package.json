@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "main": "index.ts",
   "types": "index.d.ts",
-  
+  "type": "module",
   "devDependencies": {
     "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3"
+    "@types/react-dom": "^19.2.3",
+    "@types/ws": "^8.18.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "ws": "ts-node ./websocket/ws-server.ts"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.1",
@@ -17,6 +23,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-redux": "^9.2.0",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.17",
+    "ws": "^8.18.3"
   }
 }

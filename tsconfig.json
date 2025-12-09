@@ -28,6 +28,6 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "global.d.ts"
-  ],
+, "shared/websocket/ws-server.ts"  ],
   "exclude": ["node_modules"]
 }

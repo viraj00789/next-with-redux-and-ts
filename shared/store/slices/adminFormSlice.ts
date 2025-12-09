@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AdminForm, AdminFormState } from "./sliceTypes/adminFormTypes";
 import { Product } from "../../dataFile/dataFileTypes/productTypes";
 import { products } from "../../dataFile/fruitAndVegetables";
-
+import { ws } from "../../../my-app-with-ts-admin/app/page";
 const initialState: AdminFormState = {
   form: {
     name: "",
@@ -64,14 +64,31 @@ const adminFormSlice = createSlice({
       state.products.unshift(newProduct);
 
       state.form = initialState.form;
+
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(
+          JSON.stringify({
+            type: "addProduct",
+            payload: newProduct,
+          })
+        );
+      }
     },
     setProducts(state, action: PayloadAction<Product[]>) {
       state.products = action.payload;
     },
+    addProductFromWS(state, action: PayloadAction<Product>) {
+      state.products.unshift(action.payload);
+    },
   },
 });
 
-export const { updateField, resetForm, addProduct, setProducts } =
-  adminFormSlice.actions;
+export const {
+  updateField,
+  resetForm,
+  addProduct,
+  setProducts,
+  addProductFromWS,
+} = adminFormSlice.actions;
 
 export default adminFormSlice.reducer;

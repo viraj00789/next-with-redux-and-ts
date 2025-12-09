@@ -9,3 +9,5 @@ export * from "./store/slices/admincartSlice";
 export * from "./store/slices/authSlice";
 export * from "./store/store";
 export * from "./utils/productStorage";
+export * from "./websocket/ws-event";
+export * from "./websocket/ws-client";
