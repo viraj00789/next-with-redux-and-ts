@@ -17,3 +17,6 @@ my-app-with-ts-product/.env*
 my-app-with-ts-admin/.env*
 shared/.env*
 
+#Igonre Logs
+my-app-with-ts-product/.next
+my-app-with-ts-admin/.next
