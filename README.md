@@ -97,7 +97,7 @@ my-workspace
 Import anything from the shared workspace:
 
 ```ts
-import { someUtil } from "shared";
+import { someUtil } from "@shared";
 ```
 
 pnpm symlinks the workspace — no publishing needed.
