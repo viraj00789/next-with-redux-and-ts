@@ -1,0 +1,19 @@
+# Igonre the node modules
+/node_modules*
+shared/node_modules
+my-app-with-ts-product/node_modules
+my-app-with-ts-admin/node_modules
+
+# Ignore Build
+# my-app-with-ts-product/.next/
+# my-app-with-ts-admin/.next/
+
+my-app-with-ts-product/build/
+my-app-with-ts-admin/build/
+shared/build
+
+#Ignore the env
+my-app-with-ts-product/.env*
+my-app-with-ts-admin/.env*
+shared/.env*
+

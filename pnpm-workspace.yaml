@@ -1,0 +1,5 @@
+# Incldue all the packages in the workspace that have name
+packages:
+  - "my-app-with-ts-admin"
+  - "my-app-with-ts-product"
+  - "shared"
