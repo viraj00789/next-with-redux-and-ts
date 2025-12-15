@@ -1,4 +1,4 @@
-# 🚀 Next.js Monorepo with TypeScript, Redux Toolkit & pnpm Workspaces
+# 🚀 Next.js Monorepo with TypeScript, Redux Toolkit, WebSocket & pnpm Workspaces
 
 This repository contains a scalable **Next.js monorepo** built using:
 
