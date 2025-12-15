@@ -16,4 +16,5 @@
 **/logs/
 *.log
 
-
+#Ignore the dist
+**/dist/

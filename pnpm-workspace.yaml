@@ -3,3 +3,4 @@ packages:
   - "my-app-with-ts-admin"
   - "my-app-with-ts-product"
   - "shared"
+  - "ws-server"
