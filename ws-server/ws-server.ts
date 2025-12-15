@@ -1,11 +1,14 @@
 import { WebSocket, WebSocketServer } from "ws";
-
+import "dotenv/config";
 interface WSMessage {
   type: string;
   payload?: any;
 }
 
-const wss = new WebSocketServer({ port: 4000 });
+const PORT = Number(process.env.PORT) || 8080;
+const wss = new WebSocketServer({ port: PORT });
+
+console.log(`WebSocket server running on port ${PORT}`);
 
 wss.on("connection", (ws: WebSocket) => {
   console.log("Client connected");
@@ -20,8 +23,8 @@ wss.on("connection", (ws: WebSocket) => {
       return;
     }
 
-    // Broadcast the message to all connected clients
-    wss.clients.forEach((client: WebSocket) => {
+    // Broadcast to all clients
+    wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
         client.send(JSON.stringify(message));
       }
@@ -33,4 +36,10 @@ wss.on("connection", (ws: WebSocket) => {
   });
 });
 
-console.log("WebSocket server running at ws://localhost:4000");
+setInterval(() => {
+  wss.clients.forEach((client) => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(JSON.stringify({ type: "ping" }));
+    }
+  });
+}, 30000);

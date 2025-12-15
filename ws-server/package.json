@@ -1,27 +1,26 @@
 {
   "name": "ws-server",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
-  "main": "index.ts",
-  "types": "index.d.ts",
-  "description": "This is the websocket server",
-  "scripts": {
-    "ws": "ts-node ws-server.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "WebSocket server",
   "packageManager": "pnpm@10.14.0",
-  "devDependencies": {
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "@types/ws": "^8.18.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+  "scripts": {
+    "dev": "tsx watch ws-server.ts",
+    "build": "tsc",
+    "start": "node dist/ws-server.js"
   },
   "dependencies": {
-    "ws": "^8.18.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "dotenv": "^17.2.3",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
