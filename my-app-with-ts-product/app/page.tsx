@@ -2,9 +2,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import ProductCard from "@shared/components/ProductCard";
 import { RootState } from "@shared/store/store";
-import { connectWS } from "@shared/websocket/ws-client";
+import { connectWS } from "@ws-server/ws-client";
 import { useEffect } from "react";
-import { listenWS } from "@shared/websocket/ws-event";
+import { listenWS } from "@ws-server/ws-event";
 import { addProductFromWS } from "@shared/store/slices/adminFormSlice";
 
 export let ws: WebSocket | null = null;
