@@ -4,8 +4,7 @@
   "workspaces": [
     "my-app-with-ts-admin",
     "my-app-with-ts-product",
-    "shared",
-    "ws-server"
+    "shared"
   ],
   "scripts": {
     "dev": "pnpm -r dev",

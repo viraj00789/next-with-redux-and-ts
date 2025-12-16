@@ -9,8 +9,8 @@ import { Button } from "@shared/components/Button";
 export default function AdminProductForm() {
     const dispatch = useDispatch();
 
-    const form = useSelector((state: RootState) => state.adminForm.form);
-    const products = useSelector((state: RootState) => state.adminForm.products);
+    const { form, products } = useSelector((state: RootState) => state.adminForm);
+
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

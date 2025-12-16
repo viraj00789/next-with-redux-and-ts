@@ -17,7 +17,7 @@ export default function Navbar({
     return (
         <>
             <div className="w-full bg-green-600 text-white px-6 py-4 flex justify-between items-center shadow-md fixed top-0 z-10 mb-10">
-                <Link href="http://localhost:3000/" className="text-4xl font-bold">
+                <Link href="https://next-with-ts-product.vercel.app" className="text-4xl font-bold">
                     FreshMarket
                 </Link>
 
@@ -25,10 +25,10 @@ export default function Navbar({
                     {user?.email && (
                         <p className="text-white font-normal text-xl">{user?.email}</p>
                     )}
-                    {!showCartAndLogin && <Link href="http://localhost:3001/admin" className="hover:text-yellow-300">
+                    {!showCartAndLogin && <Link href="http://next-with-ts-admin.vercel.app" className="hover:text-yellow-300">
                         Admin
                     </Link>}
-                    {showCartAndLogin && <Link href="http://localhost:3000/cart" className="hover:text-yellow-300">
+                    {showCartAndLogin && <Link href="https://next-with-ts-product.vercel.app/cart" className="hover:text-yellow-300">
                         Cart ({cart.length})
                     </Link>}
 
